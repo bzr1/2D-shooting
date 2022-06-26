@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Invader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Scaffold</a> &gt; <a href="index.source.html" class="el_package">invadem</a> &gt; <span class="el_source">Invader.java</span></div><h1>Invader.java</h1><pre class="source lang-java linenums">package invadem;
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class Invader extends Gobject {
+
+<span class="nc" id="L7">    private String state1 = null;</span>
+<span class="nc" id="L8">    private String state0 = null;</span>
+<span class="nc" id="L9">    private String state2 = null;</span>
+<span class="nc" id="L10">    private boolean movestate=false;</span>
+    float stepcountright;
+    float stepdowncount;
+    float stepcountleft;
+    boolean right;
+
+    public Invader(float x, float y, PImage image, float width, float height, float vx, float vy, int life) {
+<span class="nc" id="L17">        super(x, y, image, width, height, vx, vy, life);</span>
+<span class="nc" id="L18">        right=false;</span>
+
+<span class="nc" id="L20">    }</span>
+
+    public void changestate(PApplet app) {
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if(this.getLife()==0){</span>
+<span class="nc" id="L24">            this.image=app.loadImage(state0);  //dead image</span>
+        }
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        else if(this.getLife()!=0) {</span>
+
+<span class="nc bnc" id="L28" title="All 2 branches missed.">            if (movestate == false) {</span>
+
+<span class="nc" id="L30">                this.image = app.loadImage(state1);</span>
+            }                                               //2 movement
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            if (movestate == true) {</span>
+
+<span class="nc" id="L34">                this.image = app.loadImage(state2);</span>
+            }
+        }
+
+
+<span class="nc" id="L39">    }</span>
+
+
+
+
+    public boolean getmovestate(){
+<span class="nc" id="L45">        return movestate;</span>
+    }
+    public void setmovestate(boolean movestate){
+<span class="nc" id="L48">        this.movestate=movestate;</span>
+<span class="nc" id="L49">    }</span>
+    public String getState1() {
+<span class="nc" id="L51">        return state1;</span>
+    }
+
+    public void setState1(String state1) {
+<span class="nc" id="L55">        this.state1 = state1;</span>
+<span class="nc" id="L56">    }</span>
+
+    public String getState0() {
+<span class="nc" id="L59">        return state0;</span>
+    }
+
+    public void setState0(String state0) {
+<span class="nc" id="L63">        this.state0 = state0;</span>
+<span class="nc" id="L64">    }</span>
+    public String getState2() {
+<span class="nc" id="L66">        return state2;</span>
+    }
+
+    public void setState2(String state2) {
+<span class="nc" id="L70">        this.state2 = state2;</span>
+<span class="nc" id="L71">    }</span>
+    public void moveleft(){
+
+<span class="nc" id="L74">            this.x=this.x-vx;</span>
+<span class="nc" id="L75">        }</span>
+
+
+    public void moveright(){
+
+<span class="nc" id="L80">            this.x=this.x+vx;</span>
+<span class="nc" id="L81">        }</span>
+     public void movedown(){
+<span class="nc" id="L83">        this.y=this.y+vy;</span>
+<span class="nc" id="L84">     }</span>
+
+     public void draw(PApplet app){
+<span class="nc" id="L87">         app.image(this.getImage(), this.getX(), this.getY(), this.getWidth(), this.getHeight());</span>
+<span class="nc" id="L88">         tick(app);</span>
+<span class="nc" id="L89">     };</span>
+    public void tick(PApplet app) {    //method for move on the certain route
+<span class="nc bnc" id="L91" title="All 6 branches missed.">        if ((stepcountright == 30 || stepcountleft == 30) &amp;&amp; stepdowncount &lt; 8) {</span>
+
+<span class="nc" id="L93">            this.setmovestate(true);</span>
+<span class="nc" id="L94">            this.changestate(app);</span>
+
+<span class="nc" id="L96">            this.movedown();</span>
+<span class="nc" id="L97">            stepdowncount += 0.5;</span>
+        }
+
+
+
+
+
+<span class="nc bnc" id="L104" title="All 4 branches missed.">        else if(stepcountright&lt;30 &amp;&amp; right==false){</span>
+
+<span class="nc" id="L106">                    this.setmovestate(false);</span>
+<span class="nc" id="L107">                    this.changestate(app);</span>
+
+<span class="nc" id="L109">                    this.moveright();</span>
+<span class="nc" id="L110">            stepdowncount=0;</span>
+<span class="nc" id="L111">            stepcountleft=0;</span>
+<span class="nc" id="L112">            stepcountright+=0.5;}</span>
+
+<span class="nc bnc" id="L114" title="All 4 branches missed.">        else if( stepcountleft&lt;30 &amp;&amp; right==true ){</span>
+
+<span class="nc" id="L116">                    this.setmovestate(false);</span>
+<span class="nc" id="L117">                   this.changestate(app);</span>
+
+
+
+<span class="nc" id="L121">                    this.moveleft();</span>
+
+<span class="nc" id="L123">            stepdowncount=0;</span>
+<span class="nc" id="L124">            stepcountright=0;</span>
+<span class="nc" id="L125">            stepcountleft+=0.5;</span>
+
+
+        }
+
+
+<span class="nc bnc" id="L131" title="All 2 branches missed.">        if(stepcountright==30){right=true;}</span>
+<span class="nc bnc" id="L132" title="All 2 branches missed.">        else if(stepcountleft==30){right=false; }</span>
+
+<span class="nc" id="L134">    };</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

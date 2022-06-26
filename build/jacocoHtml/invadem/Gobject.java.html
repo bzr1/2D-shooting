@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Gobject.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Scaffold</a> &gt; <a href="index.source.html" class="el_package">invadem</a> &gt; <span class="el_source">Gobject.java</span></div><h1>Gobject.java</h1><pre class="source lang-java linenums">package invadem;
+import processing.core.PApplet;
+import processing.core.PImage;
+import java.util.*;
+
+public abstract class Gobject {
+  protected float x;
+  protected float y;
+  protected PImage image;
+  protected float width;
+  protected float height;
+  protected float vx;
+  protected float vy;
+  protected int life;
+
+<span class="fc" id="L16">    public Gobject(float x, float y, PImage image, float width, float height, float vx, float vy, int life) {</span>
+<span class="fc" id="L17">        this.x = x;</span>
+<span class="fc" id="L18">        this.y = y;</span>
+<span class="fc" id="L19">        this.image = image;</span>
+<span class="fc" id="L20">        this.width = width;</span>
+<span class="fc" id="L21">        this.height = height;</span>
+<span class="fc" id="L22">        this.vx = vx;</span>
+<span class="fc" id="L23">        this.vy = vy;</span>
+<span class="fc" id="L24">        this.life = life;</span>
+<span class="fc" id="L25">    }</span>
+<span class="nc" id="L26">    public void draw(PApplet app){};</span>
+<span class="nc" id="L27">    public void tick(){};</span>
+
+    public float getX() {
+<span class="nc" id="L30">        return x;</span>
+    }
+
+    public void setX(float x) {
+<span class="nc" id="L34">        this.x = x;</span>
+<span class="nc" id="L35">    }</span>
+
+    public float getY() {
+<span class="nc" id="L38">        return y;</span>
+    }
+
+    public void setY(float y) {
+<span class="nc" id="L42">        this.y = y;</span>
+<span class="nc" id="L43">    }</span>
+
+    public PImage getImage() {
+<span class="nc" id="L46">        return image;</span>
+    }
+
+    public void setimage(PApplet app,String route){
+<span class="nc" id="L50">      this.image=app.loadImage(route);</span>
+<span class="nc" id="L51">  }</span>
+
+    public float getWidth() {
+<span class="nc" id="L54">        return width;</span>
+    }
+
+    public void setWidth(float width) {
+<span class="nc" id="L58">        this.width = width;</span>
+<span class="nc" id="L59">    }</span>
+
+    public float getHeight() {
+<span class="nc" id="L62">        return height;</span>
+    }
+
+    public void setHeight(float height) {
+<span class="nc" id="L66">        this.height = height;</span>
+<span class="nc" id="L67">    }</span>
+
+    public float getVx() {
+<span class="nc" id="L70">        return vx;</span>
+    }
+
+    public void setVx(float vx) {
+<span class="nc" id="L74">        this.vx = vx;</span>
+<span class="nc" id="L75">    }</span>
+
+    public float getVy() {
+<span class="nc" id="L78">        return vy;</span>
+    }
+
+    public void setVy(float vy) {
+<span class="nc" id="L82">        this.vy = vy;</span>
+<span class="nc" id="L83">    }</span>
+
+    public int getLife() {
+<span class="fc" id="L86">        return life;</span>
+    }
+
+    public void setLife(int life) {
+<span class="nc" id="L90">        this.life = life;</span>
+<span class="nc" id="L91">    }</span>
+
+
+//  public Gobject(PImage image){
+//      x=320;
+//      y=464;
+//    this.image=image;
+//  }
+//
+//    public Gobject(PImage image, int x, int y){
+//        this.x=x;
+//        this.y=y;
+//        this.image=image;
+//    }
+//
+//
+//
+//
+
+
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="invadem.BarrierTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-11-12T09:30:19" hostname="vlan-2649-10-19-145-66.student.wireless.sydney.edu.au" time="0.001">
+  <properties/>
+  <testcase name="testBarrierNotDestroyed" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarriergetstate1" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarriergetstate2" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarriergetstate3" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarriergetstate4" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarrierHitPointsMax" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarrierIsDestroyed" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="barrierConstruction" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarrierHitPoints2" classname="invadem.BarrierTest" time="0.0"/>
+  <testcase name="testBarrierHitPoints3" classname="invadem.BarrierTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

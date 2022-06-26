@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="invadem.TankTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2019-11-12T09:30:19" hostname="vlan-2649-10-19-145-66.student.wireless.sydney.edu.au" time="0.005">
+  <properties/>
+  <testcase name="testTankgetwidth" classname="invadem.TankTest" time="0.001"/>
+  <testcase name="testTanksetheight" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankgetheight" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankgetlife" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTanksetx" classname="invadem.TankTest" time="0.001"/>
+  <testcase name="testTanksety" classname="invadem.TankTest" time="0.001"/>
+  <testcase name="testTankMoveLeft" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankItick" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankgetvx" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankgetvy" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTanksetvx" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTanksetvy" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankMoveRight" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankConstruction" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTankIsNotDead" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTanksetwidth" classname="invadem.TankTest" time="0.0"/>
+  <testcase name="testTanksetlife" classname="invadem.TankTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
